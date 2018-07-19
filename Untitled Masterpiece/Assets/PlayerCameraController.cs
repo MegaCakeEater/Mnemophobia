@@ -20,7 +20,6 @@ public class PlayerCameraController : MonoBehaviour {
 		transform.rotation = transform.rotation * cameraAngle;
 		_cameraOffset =  cameraAngle * _cameraOffset;
 		Vector3 newPosition = transform.position + _cameraOffset;
-		Debug.Log(newPosition);
 		_playerCam.transform.position = Vector3.Slerp(transform.position,newPosition,_smoothingX);
 		_playerCam.transform.rotation = transform.rotation * cameraAngle;
 		_playerCam.transform.eulerAngles = new Vector3(Mathf.Clamp(-Input.mousePosition.y * _smoothingY, _cameraRestrictMin, _cameraRestrictMax), _playerCam.transform.eulerAngles.y, 0f);
