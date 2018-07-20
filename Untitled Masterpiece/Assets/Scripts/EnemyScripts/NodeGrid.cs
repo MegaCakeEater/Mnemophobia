@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 
 
-class Grid : MonoBehaviour
+class NodeGrid : MonoBehaviour
 {
     Node[,] grid;
     public Vector2 gridWorldSize;
@@ -13,9 +13,10 @@ class Grid : MonoBehaviour
     public LayerMask unwalkableMask;
     float nodeDiameter;
     int gridSizeX, gridSizeY;
+    List<Node> nodeList = new List<Node>();
 
 
-    void Start()
+    void Awake()
     {
         nodeDiameter = nodeRadius * 2;
         gridSizeX = Mathf.RoundToInt(gridWorldSize.x / nodeDiameter);
@@ -34,13 +35,21 @@ class Grid : MonoBehaviour
                 Vector3 worldPoint = worldBottomLeft + Vector3.right * (x * nodeDiameter + nodeRadius) + Vector3.forward * (y * nodeDiameter + nodeRadius);
                 bool walkable = !(Physics.CheckSphere(worldPoint ,nodeRadius, unwalkableMask));
                 grid[x, y] = new Node(walkable, worldPoint);
+                nodeList.Add(grid[x, y]);
             }
         }
     }
 
-    public Node[,] getNodes()
+    public List<Node> getNodes()
     {
-        return grid;
+        if(nodeList.Count > 0)
+        {
+            return nodeList;
+        } else
+        {
+            return null;
+        }
+        
     }
 
     public Node NodeFromWorldPoint(Vector3 position)
