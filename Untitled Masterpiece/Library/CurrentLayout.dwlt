@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 342}
   m_MaxSize: {x: 12006, y: 8042}
   vertical: 0
-  controlID: 27
+  controlID: 90
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 342}
   m_MaxSize: {x: 8004, y: 8042}
   vertical: 1
-  controlID: 28
+  controlID: 91
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 29
+  controlID: 92
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,12 +230,12 @@ MonoBehaviour:
     height: 378
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 2
+  m_Selected: 1
   m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -364,23 +364,23 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d20b0000
-    m_LastClickedID: 3026
-    m_ExpandedIDs: f0fbffff00000000a80b0000ac0b0000
+    m_SelectedIDs: dc0b0000
+    m_LastClickedID: 3036
+    m_ExpandedIDs: f0fbffff000000009a0b0000ac0b0000b00b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Player Weapon
-      m_OriginalName: Player Weapon
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 3026
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -453,11 +453,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.43418303, y: 0.113279976, z: -0.05513881, w: -0.8919711}
     speed: 2
-    m_Value: {x: -0.43418303, y: 0.113279976, z: -0.05513881, w: -0.8919711}
+    m_Value: {x: -0.434183, y: 0.11327997, z: -0.055138808, w: -0.89197105}
   m_Size:
-    m_Target: 4.9856215
+    m_Target: 5.2856216
     speed: 2
-    m_Value: 4.9856215
+    m_Value: 5.2856216
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -565,20 +565,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: Z:\Game Dev\Untitled Masterpiece
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e8080000
-    m_LastClickedID: 2280
-    m_ExpandedIDs: 00000000e8080000ee0a000000ca9a3bffffff7f
+    m_SelectedIDs: 08090000
+    m_LastClickedID: 2312
+    m_ExpandedIDs: 00000000ea080000f00a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -606,7 +606,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e8080000
+    m_ExpandedIDs: 00000000ea080000f00a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -631,8 +631,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: d40a0000
-    m_LastClickedInstanceID: 2772
+    m_SelectedInstanceIDs: b00b0000
+    m_LastClickedInstanceID: 2992
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009e81000000000000fe3e0000
     m_RenameOverlay:
@@ -714,7 +714,7 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 3026
+  m_LastSelectedObjectID: 2992
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
