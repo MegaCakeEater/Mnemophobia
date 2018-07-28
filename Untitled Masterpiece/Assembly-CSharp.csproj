@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\HealthManager.cs" />
      <Compile Include="Assets\PlayerCameraController.cs" />
      <Compile Include="Assets\PlayerMovementController.cs" />
      <Compile Include="Assets\Scripts\EnemyScripts\EnemyMovement.cs" />

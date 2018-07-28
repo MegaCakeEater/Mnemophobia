@@ -12,6 +12,10 @@ public class PlayerMovementController : MonoBehaviour
     private Vector3 _inputs;
     private bool _isGrounded;
     private Animator _animator;
+    public BoxCollider _weaponCollider;
+    public int _framesWeaponColliderActive = 20;
+    private int _framesWeaponColliderActiveCounter = 0;
+    private bool _attacking = false;
 
     void Start()
     {
@@ -37,9 +41,11 @@ public class PlayerMovementController : MonoBehaviour
             Vector3 dashVelocity = Vector3.Scale(transform.forward, _sprintSpeed * new Vector3((Mathf.Log(1f / (Time.deltaTime * _rigidbody.drag + 1)) / -Time.deltaTime), 0, (Mathf.Log(1f / (Time.deltaTime * _rigidbody.drag + 1)) / -Time.deltaTime)));
             _rigidbody.AddForce(dashVelocity, ForceMode.VelocityChange);
         }
-        if (Input.GetButton("Attack"))
+        if (Input.GetButton("Attack") && !_attacking)
         {
+            _attacking = true;
 			_animator.Play("PlayerWeaponAttack");
+            _weaponCollider.enabled = true;
         }
     }
 
@@ -47,18 +53,26 @@ public class PlayerMovementController : MonoBehaviour
     void FixedUpdate()
     {
         _rigidbody.MovePosition(_rigidbody.position + transform.rotation * _inputs * _movementSpeed * Time.fixedDeltaTime);
+        if(_weaponCollider.enabled) {
+            _framesWeaponColliderActiveCounter++;
+        }
+        if(_framesWeaponColliderActive <= _framesWeaponColliderActiveCounter) {
+            _framesWeaponColliderActiveCounter = 0;
+            _weaponCollider.enabled = false;
+            _attacking = false;
+        }
     }
 
     void OnCollisionEnter(Collision hit)
     {
-        if (hit.collider.tag == "Terrain")
+        if (hit.gameObject.tag == "Terrain")
         {
             _isGrounded = true;
         }
     }
     void OnCollisionExit(Collision hit)
     {
-        if (hit.collider.tag == "Terrain")
+        if (hit.gameObject.tag == "Terrain")
         {
             _isGrounded = false;
         }
